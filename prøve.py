@@ -3,8 +3,12 @@
 #Konstaner
 c = 3 * 1E8
 lambda0 = [278, 490, 687, 856, 954, 399]
+lambda_obs = [280, 520, 675, 810, 990, 400]
 
+
+def stjernefart(lst1, lst2):
     v_lst = [] #Unødvendig liste nå, kan være fin til senere hvis vi vil sammenlikne farten på stjernene
+
     for i in range(len(lst1)):
         v = round((lst1[i]-lst2[i])/ lst2[i] * c, 2) #regner ut farten og runder av til to desimaler
         if v < 0:
